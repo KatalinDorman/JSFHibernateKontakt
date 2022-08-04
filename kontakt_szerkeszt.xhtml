@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            Név:
+            <h:inputText value="#{listazo.kivalasztottKontakt.name}"/> <br/>
+            Email:
+            <h:inputText value="#{listazo.kivalasztottKontakt.email}"/><br/>
+            Születési dátum:
+            
+            <h:inputText value="#{listazo.kivalasztottKontakt.birthdate}">
+            <f:convertDateTime pattern="yyyy.MM.dd"/>
+            </h:inputText><br/>
+
+            <h:commandButton value="Mégsem" action="index" immediate="true"/>
+            <h:commandButton value="Mentés" action="#{listazo.kontaktMent()}" />
+        </h:form>
+    </h:body>
+</html>
